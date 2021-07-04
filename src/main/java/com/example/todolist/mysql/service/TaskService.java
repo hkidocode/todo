@@ -13,6 +13,7 @@ import java.util.List;
 @Transactional
 public class TaskService {
 
+
     @Autowired
     private TaskRepository taskRepository;
 
@@ -20,6 +21,7 @@ public class TaskService {
         if (taskRepository.findById(taskId).isPresent())
             return taskRepository.findById(taskId).get();
         throw new TaskNotExistException("Task entity does not exist");
+
     }
 
     public List<Task> getAll() {

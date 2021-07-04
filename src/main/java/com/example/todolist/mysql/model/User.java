@@ -49,7 +49,14 @@ public class User {
     @OneToMany(targetEntity = Task.class, mappedBy = "user")
     private List<Task> tasks = new ArrayList<>();
 
-    public User(String fullName, String email, String password) {
+    public User(@NotNull @Size(max = 40) String fullName, @NotNull @Size(max = 70) @Email String email, @NotNull @Size(max = 40) String password) {
+        this.fullName = fullName;
+        this.email = email;
+        this.password = password;
+    }
+
+    public User(Long idUser, @NotNull @Size(max = 40) String fullName, @NotNull @Size(max = 70) @Email String email, @NotNull @Size(max = 40) String password) {
+        this.idUser = idUser;
         this.fullName = fullName;
         this.email = email;
         this.password = password;
