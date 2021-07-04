@@ -28,7 +28,6 @@ public class Task {
     @NotNull
     @Column(name = "date")
     private Date date;
-    @JsonIgnore
     @ManyToOne(targetEntity = User.class)
     @JoinColumn(name = "id_user")
     private User user;
