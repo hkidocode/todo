@@ -5,8 +5,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import java.sql.Timestamp;
 import java.util.Map;
 
-// to show exeption messages
-
 @JsonInclude(JsonInclude.Include.NON_NULL) // does not show nullable attributes
 public class ApiError {
     private int status;
