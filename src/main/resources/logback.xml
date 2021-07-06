@@ -11,7 +11,7 @@
 
     </appender>
 
-    <property name="LOG_PATH" value="/temp/logs"/>
+    <property name="LOG_PATH" value="/root/temp/logs"/>
 
     <appender name="SAVE-TO-FILE-ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
 
